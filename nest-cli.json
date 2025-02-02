@@ -10,15 +10,6 @@
   "monorepo": true,
   "root": "apps/",
   "projects": {
-    "e-commerce": {
-      "type": "application",
-      "root": "apps/e-commerce",
-      "entryFile": "main",
-      "sourceRoot": "apps/e-commerce/src",
-      "compilerOptions": {
-        "tsConfigPath": "apps/e-commerce/tsconfig.app.json"
-      }
-    },
     "order": {
       "type": "application",
       "root": "apps/order",
