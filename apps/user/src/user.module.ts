@@ -10,13 +10,13 @@ import { AuthService } from './auth.service';
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: process.env.DB_HOST,
-      port: parseInt(process.env.DB_PORT || '5432', 10),
-      username: process.env.DB_USERNAME,
-      password: process.env.DB_PASSWORD,
-      database: process.env.DB_DATABASE,
+      host: 'localhost', //process.env.DB_HOST,
+      port:  5432, //parseInt(process.env.DB_PORT || '5432', 10),
+      username: 'emmolly', //process.env.DB_USERNAME,
+      password: 'emmolly', //process.env.DB_PASSWORD,
+      database: 'ecommerce_db', //process.env.DB_DATABASE,
       entities: [User],
-      synchronize: true, // this should be false in production
+      synchronize: true, // set to false in production
     }),
     TypeOrmModule.forFeature([User]),
     JwtModule.register({
