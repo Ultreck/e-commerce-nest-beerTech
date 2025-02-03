@@ -17,7 +17,7 @@ export class User {
 
     // I'm declaring the method async function to hash the password before saving it to the database
     async hashPassword(): Promise<void>{
-        this.password = bcrypt.hash(this.password, 10);
+        this.password = await bcrypt.hash(this.password, 10);
     };
 
     // I'm declaring the method async function to compare the password

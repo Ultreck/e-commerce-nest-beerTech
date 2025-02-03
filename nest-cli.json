@@ -4,12 +4,20 @@
   "sourceRoot": "apps/user/src",
   "compilerOptions": {
     "deleteOutDir": true,
-    "webpack": true,
-    "tsConfigPath": "apps/user/tsconfig.app.json"
+    "webpack": true
   },
   "monorepo": true,
-  "root": "apps/",
+  "root": "apps/user",
   "projects": {
+    "user": {
+      "type": "application",
+      "root": "apps/user",
+      "entryFile": "main",
+      "sourceRoot": "apps/user/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/user/tsconfig.app.json"
+      }
+    },
     "order": {
       "type": "application",
       "root": "apps/order",
@@ -26,15 +34,6 @@
       "sourceRoot": "apps/product/src",
       "compilerOptions": {
         "tsConfigPath": "apps/product/tsconfig.app.json"
-      }
-    },
-    "user": {
-      "type": "application",
-      "root": "apps/user",
-      "entryFile": "main",
-      "sourceRoot": "apps/user/src",
-      "compilerOptions": {
-        "tsConfigPath": "apps/user/tsconfig.app.json"
       }
     }
   }
